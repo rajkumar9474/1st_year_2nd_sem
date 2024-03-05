@@ -1,0 +1,6 @@
+there are 3 new string class
+1) string 
+    this are immutable
+        there are 11 construtor and 40+ methode.
+2) stringbuilder
+3) stirngbuffer
