@@ -4,6 +4,13 @@ int qarr[LEN] = {0};
 int front = 0;
 int rear = -1;
 
+void show(){
+    for(int i = 0;i<LEN;i++){
+        printf("%d ",qarr[i]);
+    }
+    printf("\n");
+}
+
 int Isfull(){
     if(rear == LEN-1) 
         return 1;
@@ -14,6 +21,8 @@ int Isempty(){
     if(front == 0 && rear == -1){
         return 1;
     }
+    else if(front>rear)
+        return 1;
     else
         return 0;
 }
@@ -25,6 +34,7 @@ void enqueue(int num){
         rear++;
         qarr[rear] = num;
     }
+    show();
 }
 void dequeue(){
     if(Isempty() == 1){
@@ -33,42 +43,31 @@ void dequeue(){
     else{
         qarr[front] = 0;
         front++;
+        if(Isempty() == 1){
+            rear = -1;front = 0;
+        }
     }
-}
-void show(){
-    for(int i = 0;i<LEN;i++){
-        printf("%d ",qarr[i]);
-    }
-    printf("\n");
+    show();
 }
 
+
 int main(){
-    show();
-    dequeue();
-    show();
-    enqueue(7);
-    enqueue(6);
-    enqueue(67);
-    show();
-    dequeue();
-    show();
-    enqueue(98);
-    enqueue(39);
-    enqueue(78);
-    show();
-    dequeue();
-    dequeue();
-    show();
-    enqueue(27);
-    enqueue(83);
-    show();
-    dequeue();
-    dequeue();
-    dequeue();
-    dequeue();
-    show();
-    enqueue(30);
-    enqueue(51);
-    enqueue(72);
-    show();
+    int ch,n;
+    printf("1 - enqueue , 2 - dequeue , 3 - exit\n");
+    while(1){
+        scanf("%d",&ch);
+        switch (ch)
+        {
+        case 1:
+            scanf("%d",&n);
+            enqueue(n);
+            break;
+        case 2:
+            dequeue();
+            break;
+        default:
+            return 0;
+            break;
+        }
+    }
 }
