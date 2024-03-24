@@ -1,0 +1,22 @@
+1. create a worksheet containing students following information.
+	i) S_id(string)
+		CS1001(reference of the students of the CS , who is 1st year with 001 roll.
+	ii) name(string containing firstname and lastname)
+		Biplab Das
+	iii) age(int in year)
+	a) write a formula to extract and write dept , year and roll. In diff column for all the increasing S_id.
+	b) since they are student of vidyamandira , create new mail id column with help of increas in name. where every entry should be of hte following pattern.
+		lastname_firstname_std@vidyamandira.ac.in
+		das_biplab_std@vidyamandira.ac.in
+	(note*) use ph,ch,mt for physics,chemistry,mathematics take minimum 5 entity for each depertment.
+
+2. create a workshop containing the model,year,price foe each of a series of car , take minimum 15 entries.
+	setup formulas that enable you to enter the model and year of a car and return it's price also compute the average of price greater than or equalto the meadian price.
+
+3. create worksheet containng the traveling cost between 7 cities.
+	mulmbai, delhi,bangaluru, chennei, goa, amedabad , kolkata.
+	suppose youself to travel for mumbai to kolkata visitinf through other 5 cities also in given sequence.
+
+	i) compute the estended cost of your journey.
+	ii) show all the possible need types for you journey from mumbai to kolkata via any one of the cities and for each case show the estemeted cost.
+	iii) which trip gives you the chipest root . the cheapest root map for case 2.
